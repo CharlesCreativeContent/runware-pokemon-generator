@@ -2,7 +2,11 @@
 
 <img src="https://shawncharles.com/images/runware.png" alt="Runware" width="600" />
 
-**Node.js server** powered by the [Runware SDK](https://docs.runware.ai) that generates **Pokémon-inspired images and videos** using AI models.
+Generate **Pokémon-inspired images and videos** using the [Runware SDK](https://docs.runware.ai) with a lightweight Express.js server.
+
+Ships with two HTTP endpoints:
+	•	POST /generate-image → creates an image (and a background-removed variant)
+	•	POST /generate-video → animates an image into a short video
 
 ---
 
