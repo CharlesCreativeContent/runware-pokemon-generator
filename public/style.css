@@ -1,0 +1,694 @@
+:root {
+  --main-bg-color: #fe0065;
+  --secondary-bg-color: #ffffff;
+  --main-screen-bg-color: #ffffff;
+  --secondary-screen-bg-color: #9e9d9d;
+  --main-buttons-color: #585858;
+  --square-buttons-color: #7ca9f7;
+}
+
+.red {
+  background-color: #ff0000;
+}
+.yellow {
+  background-color: #fecb65;
+}
+.green {
+  background-color: #32cb65;
+}
+.blue {
+  background-color: #3298cb;
+}
+
+.light-blue {
+  background-color: #85bdfe;
+}
+.light-red {
+  background-color: #fe98cb;
+}
+.light-yellow {
+  background-color: #fefecb;
+}
+.light-green {
+  background-color: #98fe00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  justify-self: start;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  width: 100%;
+  height: 80px;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* poke-ball */
+.ball-container {
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  animation: shake 1.5s ease-in infinite;
+  animation-play-state: paused;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.ball-container:hover {
+  cursor: pointer;
+  animation-play-state: running;
+}
+.upper-half-ball {
+  position: absolute;
+  width: 100%;
+  height: 42%;
+  background-color: var(--main-bg-color);
+}
+
+.bottom-half-ball {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 42%;
+  background-color: var(--secondary-bg-color);
+}
+
+.center-ball {
+  background-color: white;
+  width: 20%;
+  height: 20%;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-line {
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  text-align: center;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+/* poke-dex */
+#pokedex {
+  height: 342px;
+  width: calc(228px * 2);
+  display: flex;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #pokedex {
+    width: 90%;
+  }
+}
+
+/* LEFT PANEL */
+#left-panel {
+  background-color: var(--main-bg-color);
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  display: grid;
+  grid-template-rows: 23% 50% 27%;
+  border: solid black 3px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 7px;
+}
+/* Top Lights */
+
+.lights-container {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.left-svg {
+  position: absolute;
+  z-index: +5;
+}
+
+.big-light-boarder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  height: 60px;
+  width: 60px;
+  border: solid black;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.big-light {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid black;
+}
+
+.big-dot {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 7px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.small-lights-container {
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  align-self: start;
+  justify-content: space-around;
+}
+
+.small-light {
+  border: solid black;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+}
+
+/* Center Screen */
+
+.screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  width: 150px;
+  height: 150px;
+  border: solid black;
+  border-radius: 0 0 0 17%;
+  display: grid;
+  grid-template-rows: 10% 72% 18%;
+  background-color: white;
+}
+
+.top-screen-lights {
+  width: 50%;
+  margin-top: 2px;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-light {
+  border: solid black 1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+#main-screen {
+  height: 100%;
+  width: 80%;
+  justify-self: center;
+  background-color: var(--main-screen-bg-color);
+  border: solid black 2px;
+  border-radius: 5%;
+  background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bottom-screen-lights {
+  display: flex;
+  margin-top: 5px;
+  width: 75%;
+  justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-screen-lights .small-light {
+  border: solid black 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.bottom-screen-lights .dot {
+  height: 4px;
+  width: 4px;
+  top: 2.5px;
+  left: 2px;
+}
+
+.line {
+  width: 18px;
+  height: 2px;
+  background-color: black;
+  margin-top: 2px;
+}
+
+/*Bottom buttons  */
+
+.buttons-container {
+  display: grid;
+  grid-template-rows: 40% 60%;
+}
+
+.big-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: var(--main-buttons-color);
+  margin-left: 7px;
+}
+
+.long-button {
+  width: 35px;
+  height: 2px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+
+.green-screen {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid black 2px;
+  background-color: #3ab47d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#name-screen {
+  width: 100%;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  font-size: 8.5px;
+  overflow-wrap: break-word;
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.upper-buttons-container {
+  display: flex;
+  align-items: top;
+  justify-content: start;
+}
+
+.long-buttons-container {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  margin-left: 7px;
+}
+
+.nav-buttons-container {
+  display: grid;
+  grid-template-columns: 27% 35% 38%;
+}
+
+.dots-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.right-nav-container {
+  position: relative;
+  top: -30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-button {
+  height: 52px;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-button-vertical {
+  position: absolute;
+  transform: rotate(90deg);
+  background-color: var(--main-buttons-color);
+  border-radius: 5px;
+  height: 12px;
+  width: 52px;
+  border: 2px solid black;
+}
+
+.nav-button-horizontal {
+  position: absolute;
+  background-color: var(--main-buttons-color);
+  border-radius: 5px;
+  height: 12px;
+  width: 52px;
+  border: 2px solid black;
+}
+
+.nav-center-circle {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: solid black 2px;
+  z-index: +2;
+}
+
+.border-top {
+  border-top: 3.5px solid var(--main-buttons-color);
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  right: 19.5px;
+}
+.border-bottom {
+  border-top: 3.5px solid var(--main-buttons-color);
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  right: 19.5px;
+}
+
+.bottom-right-nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bottom-right-nav-container .dots-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-right-nav-container .small-light {
+  border: solid black 2px;
+  width: 7px;
+  height: 7px;
+  margin-right: 3px;
+  margin-top: 10px;
+}
+
+.bottom-right-nav-container .dot {
+  height: 2.5px;
+  width: 2.5px;
+  top: 1.5px;
+  left: 1.5px;
+}
+
+/* RIGHT PANEL */
+
+#right-panel {
+  background-color: var(--main-bg-color);
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  display: grid;
+  grid-template-rows: 24% repeat(4, 19%);
+  border-bottom: solid black 3px;
+  border-bottom-right-radius: 10px;
+}
+#right-panel::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  bottom: 0;
+  width: 100%;
+  height: 265px;
+  backgroundcolor: white;
+  border-right: solid black 3px;
+  border-bottom-right-radius: 7px;
+}
+/* top screen */
+.top-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-panel-screen {
+  font-family: "Press Start 2P", cursive;
+  width: 146px;
+  height: 64px;
+  background-color: var(--secondary-screen-bg-color);
+  border: solid black 2px;
+  border-radius: 4px;
+  font-size: xx-small;
+  padding-left: 2px;
+  padding-right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding-left: 8px;
+  line-height: 2;
+}
+
+/* square buttons grid */
+.square-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-squares-container {
+  width: 146px;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.blue-square {
+  border-radius: 2px;
+  border: black 1.5px solid;
+  background-color: var(--square-buttons-color);
+  box-shadow: inset -2px -2px #3298cb;
+}
+
+/* center buttons */
+.center-buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center-left-container {
+  display: grid;
+}
+
+.small-reds-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.small-reds-container .small-light {
+  border: solid black 2px;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.small-reds-container .dot {
+  height: 2.5px;
+  width: 2.5px;
+  top: 1px;
+  left: 1px;
+}
+
+.white-squares-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-square {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: black 2px solid;
+  background-color: #ffffff;
+  box-shadow: inset -2px -2px gray;
+}
+
+.center-right-container {
+  display: grid;
+}
+
+.thin-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thin-button {
+  width: 35px;
+  height: 2px;
+  border: 2px solid black;
+  background-color: var(--main-buttons-color);
+  margin-left: 10px;
+}
+.yellow-button {
+  justify-self: end;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: solid 2px black;
+  margin-left: 7px;
+}
+
+.yellow-button .big-dot {
+  height: 7px;
+  width: 7px;
+  position: relative;
+  top: 3px;
+  left: 5px;
+  border-radius: 50%;
+}
+
+/* bottom screens */
+
+.bottom-screens-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-screens-container .right-panel-screen {
+  width: 64px;
+  height: 25px;
+}
+
+.mention {
+  margin-bottom: 10px;
+  width: 150px;
+  display: grid;
+  text-align: center;
+  font-size: x-large;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+.link-logo {
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.codepen {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/3037/3037366.png);
+}
+.github {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/733/733609.png);
+}
+.twitter {
+  background-image: url(https://seeklogo.com/images/T/twitter-icon-circle-black-logo-35827D553B-seeklogo.com.png);
+}
+.linkedin {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/1384/1384014.png);
+}
+
+#svg1{ fill: none;
+  stroke: black;
+  stroke-width: 3
+}
+#svg2{fill: #ffffff; stroke: none; stroke-width: 3}
+#svg3{fill: none; stroke: black; stroke-width: 3}
+
+textarea{
+    width:50%;
+    height:80%;
+    padding-inline-start: 15px;
+    padding-block-start: 15px;
+    margin-right: 6px;
+}
+
+.search-container{
+    margin-top: 15px;
+}
+
+video, #main-screen{
+  background-color: black;
+}
