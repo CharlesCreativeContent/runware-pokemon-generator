@@ -2,7 +2,7 @@
 
 <img src="https://shawncharles.com/images/runware.png" alt="Runware" width="600" />
 
-A simple **Express.js server** powered by the [Runware SDK](https://docs.runware.ai) that generates **Pokémon-inspired images and videos** using AI models.
+**Node.js server** powered by the [Runware SDK](https://docs.runware.ai) that generates **Pokémon-inspired images and videos** using AI models.
 
 ---
 
