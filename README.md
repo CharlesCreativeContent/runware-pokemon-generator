@@ -7,6 +7,7 @@ Generate **Pokémon-inspired images and videos** using the [Runware SDK](https:/
 Ships with two HTTP endpoints:
 
 •	POST /generate-image → creates an image (and a background-removed variant)
+
 •	POST /generate-video → animates an image into a short video
  
 
