@@ -6,11 +6,11 @@ Generate **Pokémon-inspired images and videos** using the [Runware SDK](https:/
 
 ## 🌟 Features
 
-- Image Generation → POST /generate-image with { "prompt": "your description" }
+- Image Generation → POST /generate-image
 
     - Returns both the raw image URL and a background-removed version.
 
-- Video Generation → POST /generate-video with { "imageURL": "...", "prompt": "..." }
+- Video Generation → POST /generate-video
 
     - Uses Google’s veo3 model to animate your Pokémon image with audio and prompt enhancement.
  
