@@ -34,6 +34,12 @@ git clone https://github.com/CharlesCreativeContent/runware-pokemon-generator.gi
 cd runware-pokemon-generator
 ```
 
+Install Runware SDK and packages:
+
+```bash
+npm install
+```
+
 Add API-Key to environment variables:
 
 ```bash
