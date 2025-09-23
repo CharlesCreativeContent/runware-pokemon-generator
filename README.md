@@ -1,6 +1,6 @@
-# Runware Pokémon Generator
+# Runware Pokémon Generator - [Watch Video](https://youtu.be/oQU5E0bBPYQ)
 
-<img src="https://github.com/CharlesCreativeContent/runware-pokemon-generator/blob/main/public/runware.gif?raw=true" alt="Runware" width="100%" />
+[<img src="https://github.com/CharlesCreativeContent/runware-pokemon-generator/blob/main/public/runware.gif?raw=true" alt="Runware" width="100%" />](https://youtu.be/oQU5E0bBPYQ)
 
 
 > Generate **Pokémon-inspired images and videos** using the [Runware SDK](https://docs.runware.ai) with a lightweight Express.js server. Runware SDK is used to run AI image generation with the Runware API, powered by the RunWare inference platform. It also allows the use of an existing library of more than 150k models, including any model or LoRA from the CivitAI gallery. The API also supports upscaling, background removal, inpainting, outpainting, ControlNets, and more. Visit the Runware site for [detailed feature breakdown](https://runware.ai/features/).
