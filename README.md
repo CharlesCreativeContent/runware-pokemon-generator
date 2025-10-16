@@ -7,19 +7,19 @@
 
 ---
 
-## 🔑 Get API access
+## Get API access
 
 For an API Key and free trial credits, [create a free account](https://my.runware.ai/) with [Runware](https://runware.ai)
 
 
-## 🚀 Deploy with Vercel
+## Deploy with Vercel
 
 Click below to clone and deploy instantly to Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CharlesCreativeContent/runware-pokemon-generator&env=RUNWARE_API_KEY&envDescription=Set%20your%20Runware%20API%20key%20and%20custom%20port.&envLink=https://docs.runware.ai/&demo-image=https://shawncharles.com/images/runware.png)
 
 
-## 📦 Installation (Local Development)
+## Installation (Local Development)
 
 Clone the repo:
 
@@ -49,7 +49,7 @@ node server.js
 
 
 
-## 🌟 Features (in app /runware.js file)
+## Features (in app /runware.js file)
 
 - Image and Video Generation using RunwareSDK
 ```javascript
